@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Takeru Satō on CoNime</title><link>https://conime2025.github.io/tags/takeru-sat%C5%8D/</link><description>Recent content in Takeru Satō on CoNime</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Jun 2025 11:00:00 +0700</lastBuildDate><atom:link href="https://conime2025.github.io/tags/takeru-sat%C5%8D/index.xml" rel="self" type="application/rss+xml"/><item><title>Review Rurouni Kenshin (2012): Samurai Penebus Dosa dan Chemistry Mengena</title><link>https://conime2025.github.io/posts/movies/review-rurouni-kenshin-2012-liveaction/</link><pubDate>Mon, 09 Jun 2025 11:00:00 +0700</pubDate><guid>https://conime2025.github.io/posts/movies/review-rurouni-kenshin-2012-liveaction/</guid><description>Adaptasi live‑action manga populer, &lt;em>Rurouni Kenshin&lt;/em> (2012) berhasil menghadirkan aksi samurai yang intens, chemistry kuat antar pemain, dan kisah penebusan yang emosional.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Takeru Satō on Skoolink</title>
+    <link>http://localhost:1313/tags/takeru-sat%C5%8D/</link>
+    <description>Recent content in Takeru Satō on Skoolink</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Jun 2025 11:00:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/takeru-sat%C5%8D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Review Rurouni Kenshin (2012): Samurai Penebus Dosa dan Chemistry Mengena</title>
+      <link>http://localhost:1313/posts/movies/review-rurouni-kenshin-2012-liveaction/</link>
+      <pubDate>Mon, 09 Jun 2025 11:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/movies/review-rurouni-kenshin-2012-liveaction/</guid>
+      <description>Adaptasi live‑action manga populer, &lt;em&gt;Rurouni Kenshin&lt;/em&gt; (2012) berhasil menghadirkan aksi samurai yang intens, chemistry kuat antar pemain, dan kisah penebusan yang emosional.</description>
+    </item>
+  </channel>
+</rss>

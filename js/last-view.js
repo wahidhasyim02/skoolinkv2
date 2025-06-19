@@ -3,7 +3,7 @@
 window.addEventListener("DOMContentLoaded", () => {
   const maxItems = 5;
   const currentUrl = window.location.pathname;
-  const isValidSinglePage = /^\/posts\/(anime|comics|movies|games)\/.+$/.test(currentUrl);
+  const isValidSinglePage = /^\/posts\/(animes|comics|movies|games)\/.+$/.test(currentUrl);
 
   if (isValidSinglePage) {
     const contentTitle = $(".post-title")?.innerText.trim();
@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     lastViewed.forEach(item => {
       const li = document.createElement("li");
-      li.className = "relative flex flex-1 justify-start items-center group gap-x-0 w-full h-full bg-cover overflow-hidden rounded-md bg-white dark:bg-gray-925 hover:bg-gray-300 hover:dark:bg-gray-900";
+      li.className = "relative flex flex-1 justify-start items-center group gap-x-0 w-full h-full bg-cover overflow-hidden rounded-md bg-gradient-to-br from-white dark:from-gray-900 from-0% via-gray-50 dark:via-gray-950 via-70% to-gray-300 dark:to-gray-950 to-100%";
       const imageSrc = item.image || "/images/default.png";
 
       li.innerHTML = `

@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Aksi on CoNime</title><link>https://conime2025.github.io/tags/aksi/</link><description>Recent content in Aksi on CoNime</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 03 Jun 2025 06:00:00 +0700</lastBuildDate><atom:link href="https://conime2025.github.io/tags/aksi/index.xml" rel="self" type="application/rss+xml"/><item><title>Chainsaw Man Volume 18 Rilis di VIZ, Denji dan Nayuta Hadapi Ancaman Gereja Chainsaw</title><link>https://conime2025.github.io/posts/comics/chainsaw-man-volume-18-rilis-viz-20250603/</link><pubDate>Tue, 03 Jun 2025 06:00:00 +0700</pubDate><guid>https://conime2025.github.io/posts/comics/chainsaw-man-volume-18-rilis-viz-20250603/</guid><description>VIZ Media resmi merilis volume ke-18 dari &lt;em>Chainsaw Man&lt;/em>, manga aksi-horor karya Tatsuki Fujimoto. Dalam volume terbaru ini, Denji dan Nayuta menghadapi ancaman besar dari Gereja Chainsaw yang semakin menguasai dunia.</description></item><item><title>Kaiju No. 8 Volume 13 Rilis di VIZ, Kafka Hadapi Ancaman Baru</title><link>https://conime2025.github.io/posts/comics/kaiju-no-8-volume-13-rilis-viz-20250603/</link><pubDate>Tue, 03 Jun 2025 06:00:00 +0700</pubDate><guid>https://conime2025.github.io/posts/comics/kaiju-no-8-volume-13-rilis-viz-20250603/</guid><description>VIZ Media resmi merilis volume ke-13 dari &lt;em>Kaiju No. 8&lt;/em>, manga aksi-fantasi karya Naoya Matsumoto. Dalam volume terbaru ini, Kafka harus menghadapi ancaman baru saat Kaiju No. 9 muncul kembali dan mengacaukan kota Tachikawa.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aksi on Skoolink</title>
+    <link>http://localhost:1313/tags/aksi/</link>
+    <description>Recent content in Aksi on Skoolink</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Jun 2025 06:00:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/aksi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chainsaw Man Volume 18 Rilis di VIZ, Denji dan Nayuta Hadapi Ancaman Gereja Chainsaw</title>
+      <link>http://localhost:1313/posts/comics/chainsaw-man-volume-18-rilis-viz-20250603/</link>
+      <pubDate>Tue, 03 Jun 2025 06:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/comics/chainsaw-man-volume-18-rilis-viz-20250603/</guid>
+      <description>VIZ Media resmi merilis volume ke-18 dari &lt;em&gt;Chainsaw Man&lt;/em&gt;, manga aksi-horor karya Tatsuki Fujimoto. Dalam volume terbaru ini, Denji dan Nayuta menghadapi ancaman besar dari Gereja Chainsaw yang semakin menguasai dunia.</description>
+    </item>
+    <item>
+      <title>Kaiju No. 8 Volume 13 Rilis di VIZ, Kafka Hadapi Ancaman Baru</title>
+      <link>http://localhost:1313/posts/comics/kaiju-no-8-volume-13-rilis-viz-20250603/</link>
+      <pubDate>Tue, 03 Jun 2025 06:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/posts/comics/kaiju-no-8-volume-13-rilis-viz-20250603/</guid>
+      <description>VIZ Media resmi merilis volume ke-13 dari &lt;em&gt;Kaiju No. 8&lt;/em&gt;, manga aksi-fantasi karya Naoya Matsumoto. Dalam volume terbaru ini, Kafka harus menghadapi ancaman baru saat Kaiju No. 9 muncul kembali dan mengacaukan kota Tachikawa.</description>
+    </item>
+  </channel>
+</rss>

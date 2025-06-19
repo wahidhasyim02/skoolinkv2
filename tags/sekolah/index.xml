@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sekolah on Skoolink</title>
+    <link>http://localhost:1313/tags/sekolah/</link>
+    <description>Recent content in Sekolah on Skoolink</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Jun 2025 09:00:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sekolah/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mengapa Sistem Presensi Digital Penting di Sekolah</title>
+      <link>http://localhost:1313/features/mengapa-sistem-presensi-digital-penting/</link>
+      <pubDate>Wed, 18 Jun 2025 09:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/features/mengapa-sistem-presensi-digital-penting/</guid>
+      <description>Presensi digital tidak hanya mempermudah pencatatan kehadiran siswa, tetapi juga membuka peluang untuk analisis dan intervensi dini terhadap masalah kehadiran.</description>
+    </item>
+  </channel>
+</rss>

@@ -16,7 +16,7 @@
     .then(res => res.json())
     .then(data => {
       const filtered = data.results
-        .filter(p => p.url.startsWith("/posts/"))
+        .filter(p => p.url.startsWith("/blog/"))
         .sort((a, b) => b.visits - a.visits)
         .slice(0, 3);
 

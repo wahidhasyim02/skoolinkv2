@@ -1,210 +1,148 @@
-// Helper function
-const $ = (selector) => document.querySelector(selector);
-const $$ = (selector) => document.querySelectorAll(selector);
+"use strict";
 
-// ====== DARK MODE TOGGLE ======
-const html = document.documentElement;
-const toggleBtn = $("#theme-toggle");
+// ::::: GLobal Javascript ::::
+// ================================Animate Interaction on Scroll ==================================
+JOS.init({
+  // disable: false, // Disable JOS gloabaly | Values :  'true', 'false'
+  // debugMode: true, // Enable JOS debug mode | Values :  'true', 'false'
+  passive: false, // Set the passive option for the scroll event listener | Values :  'true', 'false'
 
-toggleBtn?.addEventListener("click", () => {
-  const isDark = html.classList.toggle("dark");
-  localStorage.setItem("darkmode", isDark.toString());
+  once: true, // Disable JOS after first animation | Values :  'true', 'false' || Int : 0-1000
+  animation: "fade-up", // JOS global animation type | Values :  'fade', 'slide', 'zoom', 'flip', 'fade-right', 'fade-left', 'fade-up', 'fade-down', 'zoom-in-right', 'zoom-in-left', 'zoom-in-up', 'zoom-in-down', 'zoom-out-right', 'zoom-out-left', 'zoom-out-up', 'zoom-out-down', 'flip-right', 'flip-left', 'flip-up', 'flip-down, spin, revolve, stretch, "my-custom-animation"
+  // animationInverse: "static", // Set the animation type for the element when it is scrolled out of view | Values :  'fade', 'slide', 'zoom', 'flip', 'fade-right', 'fade-left', 'fade-up', 'fade-down', 'zoom-in-right', 'zoom-in-left', 'zoom-in-up', 'zoom-in-down', 'zoom-out-right', 'zoom-out-left', 'zoom-out-up', 'zoom-out-down', 'flip-right', 'flip-left', 'flip-up', 'flip-down, spin, revolve, stretch, "my-custom-animation"
+  timingFunction: "ease", // JOS global timing function | Values :  'ease', 'ease-in', 'ease-out', 'ease-in-out', 'linear', 'step-start', 'step-end', 'steps()', 'cubic-bezier()', 'my-custom-timing-function'
+  //mirror : false, // Set whether the element should animate back when scrolled out of view | Values :  'true', 'false'
+  threshold: 0, // Set gloabal the threshold for the element to be visible | Values :  0-1
+  delay: 0.5, // Set global the delay for the animation to start | Values :  0,1,2,3,4,5
+  duration: 0.7, // Set global the duration for the animation playback | Values :  flota : 0-1 & int : 0,1,2,3,4,5
+
+  // startVisible: "true", // Set whether the element should animate when the page is loaded | Values :  'true', 'false' || MS : 0-10000
+  scrollDirection: "down", // Set the scroll direction for the element to be visible | Values :  'up', 'down', 'none'
+  //scrollProgressDisable: true // disable or enable scroll callback function | Values :  'true', 'false'
+  // intersectionRatio: 0.4, // Set the intersection ratio between which the element should be visible | Values :  0-1 (automaticaly set)
+  // rootMargin_top: "0%", // Set by which percent the element should animate out (Recommended value between 10% to -30%)
+  // rootMargin_bottom: "-50%", // Set by which percent the element should animate out (Recommended value between -10% to -60%)
+  rootMargin: "0% 0% 15% 0%", // Set the root margin for the element to be visible | Values :  _% _% _% _%  (automaticaly set)
 });
 
-// ====== BERSIHKAN %20 PADA LINK ======
-$$('a[href*="%20"]').forEach(link => {
-  link.href = link.href.replace(/%20/g, '');
-});
-
-// ====== AUTO SCROLL ======
-const scrollContainer = $("#autoScroll");
-if (scrollContainer) {
-  let scrollDirection = 1;
-  function autoScroll() {
-    const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-    scrollContainer.scrollLeft += scrollDirection * 0.5;
-    if (scrollContainer.scrollLeft >= maxScroll || scrollContainer.scrollLeft <= 0) {
-      scrollDirection *= -1;
-    }
-    requestAnimationFrame(autoScroll);
-  }
-  requestAnimationFrame(autoScroll);
-}
-
-// ====== MODAL SHARE ======
-function toggleShareModal() {
-  const modal = $("#shareModal");
-  modal?.classList.toggle("hidden");
-}
-
-$("#closeModal")?.addEventListener("click", () => {
-  $("#shareModal")?.classList.add("hidden");
-});
-
-document.addEventListener("click", (event) => {
-  const modal = $("#shareModal");
-  if (
-    modal &&
-    !modal.classList.contains("hidden") &&
-    !modal.contains(event.target) &&
-    !event.target.closest('button[onclick="toggleShareModal()"]')
-  ) {
-    modal.classList.add("hidden");
-  }
-});
-
-// ====== MODAL SEARCH ======
-const btnSearchElements = $$('#searchBtn');
-const searchModal = $('#searchModal');
-
-btnSearchElements.forEach(el => {
-  el.classList.add('tombol');
-  el.addEventListener('click', () => {
-    searchModal?.classList.remove('hidden');
+// ======================================== Accordion ======================================
+let accordions = document.querySelectorAll(".accordion-item");
+accordions.forEach((item) => {
+  let label = item.querySelector(".accordion-header");
+  label.addEventListener("click", () => {
+    accordions.forEach((accordionItem) => {
+      accordionItem.classList.remove("active");
+    });
+    item.classList.toggle("active");
   });
 });
 
-document.addEventListener('click', (e) => {
-  if (
-    searchModal &&
-    !searchModal.contains(e.target) &&
-    ![...btnSearchElements].some(btn => btn.contains(e.target))
-  ) {
-    searchModal.classList.add('hidden');
-  }
+//:::::::::::::::::::::::::::::::::::::::::: Template JavaScript ::::::::::::::::::::::::::::::::::
+
+// ========================TF-1 : Brand Slider================================
+var brandSlider = new Swiper(".brand-slider", {
+  slidesPerView: 2,
+  spaceBetween: 90,
+  speed: 1200,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 5,
+    },
+  },
 });
 
+// ========================TF-2 : Brand Slider================================
+var brandSlider = new Swiper(".brand-slider-2", {
+  slidesPerView: 2,
+  spaceBetween: 90,
+  speed: 1200,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 5,
+    },
+    1400: {
+      slidesPerView: 6,
+    },
+  },
+});
+// ========================TF-3 : Testimonial Slider================================
+var testimonialOne = new Swiper(".testimonial-one", {
+  navigation: {
+    nextEl: ".slider-nav-btn-next",
+    prevEl: ".slider-nav-btn-prev",
+  },
+});
 
-// ====== COPY SHARE LINK ======
-function copyShareLink() {
-  const linkInput = $("#shareLink");
-  const popup = $("#popup-copy");
+// Get all tab buttons and content sections
+const tabButtons = document.querySelectorAll(".tab-button");
+const tabContents = document.querySelectorAll(".tab-content");
 
-  if (!linkInput || !popup) return;
+// Add click event listeners to tab buttons
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Remove 'active' class from all tab buttons and hide all tab content
+    tabButtons.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    tabContents.forEach((content) => {
+      content.classList.add("hidden");
+    });
 
-  linkInput.select();
-  linkInput.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(linkInput.value).then(() => {
-    setTimeout(() => {
-      popup.classList.remove("hidden");
-      popup.classList.add("flex");
-    }, 1000);
+    // Get the data-tab attribute of the clicked button
+    const tabId = button.getAttribute("data-tab");
+    const correspondingTab = document.getElementById(tabId);
 
-    setTimeout(() => {
-      popup.classList.remove("flex");
-      popup.classList.add("hidden");
-    }, 3000);
+    // Add 'active' class to the clicked button and show the corresponding tab content
+    button.classList.add("active");
+    correspondingTab.classList.remove("hidden");
   });
-}
+});
 
+// ========================TF-1 : Testimonial Slider================================
+const testimonialSlider = new Swiper('.testimonial-slider', {
+  // Optional parameters
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 30,
 
-// ====== SUBSCRIBE FORM ======
-  document.addEventListener("DOMContentLoaded", () => {
-  const input = document.getElementById("inputSubs");
-  const btn = document.getElementById("letSubs");
-  const errorMsg = document.getElementById("errorMsg");
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
 
-  // Awal: tombol dimatikan
-  btn.setAttribute("disabled", true);
-  setDisabledStyle(true);
-
-  // Saat input diketik
-  input.addEventListener("input", () => {
-    const email = input.value.trim();
-    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-    errorMsg.classList.add("hidden"); // sembunyikan error saat ketik
-    input.classList.remove("border", "border-red-500");
-
-    if (isValid) {
-      btn.setAttribute("disabled", true);//sementara tombol tidak bisa diklik (untuk sementara, nanti akan diaktifkan jika tersedia)
-      setDisabledStyle(true);
+// JS Toggle Button
+function toggleSwitch() {
+  var month = document.querySelectorAll(".month");
+  var annual = document.querySelectorAll(".annual");
+  for (var i = 0; i < month.length; i++) {
+    if (document.getElementById("toggle").checked == true) {
+      month[i].classList.add("hidden");
+      annual[i].classList.remove("hidden");
     } else {
-      btn.setAttribute("disabled", true);
-      setDisabledStyle(true);
-    }
-  });
-
-  // Saat tombol diklik
-  btn.addEventListener("click", () => {
-    const email = input.value.trim();
-    const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-    if (!isValid) {
-      // kemungkinan terjadi jika user memanipulasi HTML tombol agar bisa diklik
-      errorMsg.classList.remove("hidden");
-      input.classList.add("border", "border-red-500");
-      return;
-    }
-
-    // sukses
-    alert("Successfully subscribed with email: " + email);
-    input.value = "";
-    errorMsg.classList.add("hidden");
-    input.classList.remove("border", "border-red-500");
-
-    // reset tombol
-    btn.setAttribute("disabled", true);
-    setDisabledStyle(true);
-  });
-
-  // Fungsi bantu ganti style tombol
-  function setDisabledStyle(disabled) {
-    if (disabled) {
-      btn.classList.add("bg-gray-400", "dark:bg-gray-800", "hover:bg-gray-600", "hover:dark:bg-gray-800", "cursor-not-allowed");
-      btn.classList.remove("bg-conime-400", "dark:bg-conime-500", "hover:bg-conime-600", "dark:hover:bg-conime-300");
-    } else {
-      btn.classList.remove("bg-gray-400", "dark:bg-gray-800", "hover:bg-gray-600", "hover:dark:bg-gray-800", "cursor-not-allowed");
-      btn.classList.add("bg-conime-400", "dark:bg-conime-500", "hover:bg-conime-600", "dark:hover:bg-conime-300");
+      month[i].classList.remove("hidden");
+      annual[i].classList.add("hidden");
     }
   }
-});
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".slideshow").forEach(container => {
-    const images = container.querySelectorAll(".slide-img");
-    if (images.length === 0) return;
-
-    let current = 0;
-    images[current].classList.add("active");
-
-    setInterval(() => {
-      images[current].classList.remove("active");
-      current = (current + 1) % images.length;
-      images[current].classList.add("active");
-    }, 5000); // ganti setiap 5 detik
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const fallback = "/images/default.png";
-
-  document.querySelectorAll("img").forEach(img => {
-    const rawSrc = img.getAttribute("src") || "";
-    const cleanedSrc = rawSrc.trim();
-
-    const isReallyBadSrc =
-      cleanedSrc === "" || cleanedSrc === "%20" || /^(\s*|\/?%20)$/.test(rawSrc);
-
-    if (isReallyBadSrc) {
-      console.warn(`🔍 src kosong/tidak valid (${rawSrc}), set default`);
-      img.src = fallback;
-    }
-
-    // Deteksi gambar gagal dimuat sebelum error handler dipasang
-    if (img.complete && img.naturalWidth === 0) {
-      console.warn(`⚠️ Gambar gagal dimuat sejak awal: ${img.src}, ganti default`);
-      img.src = fallback;
-    }
-
-    img.onerror = () => {
-      if (img.src !== fallback) {
-        console.warn(`❌ Gagal muat gambar: ${img.src}, ganti default`);
-        img.src = fallback;
-      }
-    };
-  });
-});
+}
